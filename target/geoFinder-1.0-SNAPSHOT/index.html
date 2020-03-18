@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="geoFinderApp">
+    <link lang="en">
+    <meta charset="UTF-8">
+    <title>geoFinder</title>
+     
+    
+<!-- ********************************************
+* ELENCO DEI FILE CSS/JS PER I FOGLI DI STILE *
+******************************************** -->
+   <!-- css per icone casa e ricerca -->
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <link rel="stylesheet" href="webui/Home/assets/css/home.css" />
+    <link rel="stylesheet" href="webui/Home/assets/css/header.css" />
+
+     
+      <!-- Bootstrap core CSS -->
+    <link href="res/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="res/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="res/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="res/css/freelancer.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="res/vendor/jquery/jquery.min.js"></script>
+    <script src="res/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="res/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="res/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="res/js/jqBootstrapValidation.js"></script>
+    <script src="res/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="res/js/freelancer.min.js"></script>
+    
+
+ <!-- ************************************************************************
+      * INTEGRAZIONE GOOGLE MAPS CON KEYCODE PER GIRARE SU SERVER LOCALHOST  *
+      ************************************************************************ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMwVuUHMgn4-mWitHq81Isp1jmLRcNZ30&libraries=places"  async defer></script>
+
+ <!-- ****************************************************************************
+      * ELENCO INTEGRAZIONE DEI FILE JAVASCRITP PER L'APPLICAZIONE INIZIO CODICE *
+      **************************************************************************** -->    
+ 
+    
+    <script src="res/js/angular/angular.js"></script>
+    <script src="res/js/angular-animate/angular-animate.js"></script>
+    <script src="res/js/angular-route/angular-route.js"></script>
+    <script src="res/js/angular-resource/angular-resource.js"></script>
+    <script src="res/js/angular-messages/angular-messages.js"></script>
+    <script src="res/js/angular-cookies/angular-cookies.js"></script>
+    <script src="res/js/cryptojs/rollups/aes.js"></script>
+    <script src="res/js/cryptojs/rollups/pbkdf2.js"></script>
+ 
+  <!-- *************************************************************************************
+      * ELENCO INTEGRAZIONE DEI FILE JAVASCRITP PROPIETARI DELL'APPLICAZIONE INIZIO CODICE *
+      ************************************************************************************** -->
+<!-- INIZIO CODICE TEMPLACE COMUNE -->
+ 	<script src="webui/templateComune/templateComuneModule.js"></script>
+ 	<script src="webui/templateComune/templateComuneController.js"></script>
+        <script src="webui/templateComune/templateComuneDirective.js"></script>
+ 	
+<!-- INIZIO CODICE LOGIN -->
+ 	<script src="webui/Login/LoginModule.js"></script>
+ 	<script src="webui/Login/LoginController.js"></script>
+ 	<script src="webui/Login/LoginService.js"></script>
+        
+<!-- INIZIO CODICE HOME -->
+     <script src="webui/Home/HomeModule.js"></script>
+     <script src="webui/Home/HomeController.js"></script>
+     <script src="webui/Home/HomeService.js"></script>
+     <script src="webui/Home/HomeFactory.js"></script>
+     
+<!-- INIZIO CODICE REGISTER -->
+<script src="webui/Register/RegisterModule.js"></script>
+<script src="webui/Register/RegisterController.js"></script>
+<script src="webui/Register/RegisterService.js"></script>
+ 
+ <!-- INIZIO CODICE TEMPLATE COMUNE -->
+    <script src="webui/app.js"></script>    
+    
+</head>
+<body >
+    <div ng-view></div>
+    <div name="templateComuneController" ng-controller="templateComuneController"></div>
+</body>
+</html>

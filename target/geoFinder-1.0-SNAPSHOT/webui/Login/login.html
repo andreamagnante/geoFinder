@@ -1,0 +1,50 @@
+<div style="margin-top: 100px;" ng-include="'webui/templateComune/header.html'"></div>
+    <section id="contact" style="margin-bottom: 100px;">
+      <div class="container">
+        <form name="loginForm" id="contactForm" novalidate="novalidate">
+             <br>     
+          <br>    
+           <br> 
+        <h2 class="text-center text-uppercase text-secondary mb-0">LOGIN</h2>
+        <p class="help-block text-danger"></p>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+              <form name="loginForm" id="contactForm" novalidate="novalidate">
+    
+        
+        <div ng-show="login.error" class="alert alert-danger">{{login.error}}</div>
+            <fieldset ng-disabled="isSubmitted">
+            <div class="form-group" ng-class="{ 'has-error': loginForm.email.$dirty && (loginForm.email.$error.required || loginForm.email.$error.email) , 'valid': loginForm.email.$valid }"">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label for="email">Email <span>*</span></label>
+                <input placeholder="Inserire email" type="email" name="email" id="email" class="form-control" ng-model="login.email" required />
+                
+                <span ng-show="!loginForm.email.$pristine && loginForm.email.$dirty && loginForm.email.$error.email" class="help-block">Inserire una mail valida</span>
+                <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': loginForm.password.$dirty && loginForm.password.$error.required }">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label for="password">Password <span>*</span></label>
+                <input placeholder="Inserire password" type="password" name="password" id="password" class="form-control" ng-minlength="8" ng-model="login.password" required />
+                
+                 <span ng-show="!loginForm.password.$pristine && loginForm.password.$dirty && loginForm.password.$invalid" class="help-block">Inserire una password valida(almeno 8 cifre)</span>
+                 <p class="help-block text-danger"></p>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 50px;">
+                <button type="submit" ng-disabled="loginForm.$invalid" ng-click="login()" class="btn btn-primary btn-xl" id="sendMessageButton">Login</button>
+               
+            </div>
+         </fieldset>
+       
+    
+     </form>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+

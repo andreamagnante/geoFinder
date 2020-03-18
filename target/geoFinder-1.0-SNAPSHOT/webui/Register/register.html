@@ -1,0 +1,51 @@
+<header style="margin-top: 100px;" ng-include="'webui/templateComune/header.html'"></header>
+<section id="contact" style="margin-bottom: 15px;">
+      <div class="container">
+           <br>     
+          <br>    
+           <br> 
+        <h2 class="text-center text-uppercase text-secondary mb-0">SIGN-UP</h2>
+        <p class="help-block text-danger"></p>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="registerForm" id="contactForm" novalidate="novalidate">
+                   
+                        
+                        <div class="form-group" ng-class="{ 'has-error': registerForm.name.$dirty && registerForm.name.$error.required , 'valid': registerForm.name.$valid}">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                   <label>Username</label>
+                            <input placeholder="Inserire un nome utente" type="text" name="name" id="name" class="form-control" ng-model="register.name" required  />
+                           <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': registerForm.email.$dirty && (registerForm.email.$error.required || registerForm.email.$error.email) , 'valid': registerForm.email.$valid }">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Email</label>
+                            <input placeholder="Inserire una email" type="email" name="email" id="email" class="form-control" ng-model="register.email" required />
+                         
+                            <span ng-show="!registerForm.email.$pristine && registerForm.email.$dirty && registerForm.email.$error.email" class="help-block">Inserire una E-mail valida</span>
+                           <p class="help-block text-danger"></p>
+                           </div>
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error': registerForm.password.$dirty && registerForm.password.$error.required ,'valid': registerForm.password.$valid}">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                 <label>Password</label>
+                            <input placeholder="Inserire una password" type="password" name="password" id="password" class="form-control" minlength="8" ng-model="register.password" required />
+                            <span ng-show="!registerForm.password.$pristine && registerForm.password.$dirty && registerForm.password.$invalid" class="help-block">Inserire una password(almeno 8 cifre)</span>
+                            <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 50px;">
+                            <button type="submit" ng-disabled="registerForm.$invalid" ng-click="registrati()" class="btn btn-primary btn-xl" id="sendMessageButton">Registrati</button>
+                           
+                        </div>
+                        
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+

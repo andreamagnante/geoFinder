@@ -1,0 +1,152 @@
+<!-- Inizio codice home -->
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div>
+  <div class="container">
+  
+     
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">AGGIUNGI PUNTO PERSONALE</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form name="puntoform" novalidate="novalidate">
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="w3-xlarge"><i  class="fa fa-tag prefix grey-text"><label style="margin-left: 5px;">Nome</label></i></i>
+                    <input ng-model="nome" type="text" placeholder="Inserire il nome del posto" class="form-control validate" required />
+                    
+                </div>
+
+               
+                <div class="md-form mb-5">
+                    <i class="w3-xlarge"><i class="fa fa-chevron-down prefix grey-text"><label style="margin-left: 5px;">Categoria</label></i></i>
+                    
+                    <select  style="font-size: 20px; font-weight: bold;" placeholder="Scegli una categoria" class="form-control barraRicerca" name="catforms" ng-model="catforms" class="categoria" ng-options="x for x in catform" required ></select>
+                    
+                </div>
+
+                <div class="md-form">
+                    <i class="w3-xlarge"><i class="fa fa-pencil prefix grey-text"><label style="margin-left: 5px;">Aggiungi una descrizione</label></i></i>
+                    <textarea ng-model="descrizione" placeholder="Inserire una descrizione del posto" type="text" class="md-textarea form-control" rows="6" cols="50" style="resize: none;" required /></textarea>
+                    
+                </div>
+                
+                <div class="form-group" >
+                <button id="puntopersonale" ng-disabled="!nome || !catforms || !descrizione" ng-click="aggiungiPuntoDiInteresse();" type="submit" class="btn btn-primary btn-xl" style="margin: 20px auto auto 150px;" class="close" >Aggiungi</button>
+              </div>
+            
+        </div>
+            </form>
+    </div>
+</div>
+</div>
+        <!-- Modal -->
+  <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Vuoi davvero rimuovere questo punto personale?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form name="puntoform" >
+            <div class="modal-body mx-3">
+                
+                
+                <div class="form-group" >
+                <button id="rimuovipunto" ng-click="eliminaPuntoInteresse();" type="submit" class="btn btn-primary btn-xl" style="margin: 20px auto auto 150px;" class="close" >Rimuovi</button>
+              </div>
+            
+        </div>
+            </form>
+    </div>
+</div>
+  </div>
+</div>
+    <section class="bg-primary text-white mb-0" id="about" >
+   <div class="container" >
+    <form name="homeForm">
+     <div class="row">
+     <div class="col-xs-12">
+         <br>     
+         <br>         
+           
+
+     <h3>Trova indirizzo o la tua posizione</h3>
+     
+      <div class="input-group">
+        <input type="text" id="pac-input" ng-model="barra" class="form-control" placeholder="Cerca un luogo o un indirizzo sulla mappa">
+        <button hidden="hidden"></button>
+        <span class="input-group-btn">----OPPURE----
+            <button  ng-click="getLocation()" style="background-color: #2c3e50; border-color: #2c3e50; width: 320px;" class="btn btn-primary" title="Individua la tua posizione">
+               
+           <i class="w3-xlarge"><span>TROVA LA MIA POSIZIONE</span></i>
+         </button>
+       </span>
+     </div>
+  	</div>
+  </div>
+  <br>
+  
+    <div class="row">
+	  <div class="col-xs-10">
+	  	<h3>Mostra: <label style="font-size: 20px; color:#2c3e50;">Scegli se mostrare nella mappa i punti generali insieme a quelli personali o solo uno dei due</label></h3>
+	  	
+	  	<p><select  class="form-control barraRicerca" name="mostro" ng-model="mostra" class="mostro" ng-options="y for y in mostro" ng-change="mostraci()"> 
+                        
+                    </select> </p>
+	  </div>
+  </div>
+  
+  <div class="row" style="margin-top: 20px;">
+	  <div class="col-xs-10">
+	  	<h3>Categorie: <label style="font-size: 20px;color:#2c3e50;">Trova i punti appartenenti alla categoria scelta  </label></h3>
+                
+      <div class="input-group">
+        <p><select  class="form-control barraRicerca" name="categoria" ng-model="categoria" class="categoria" ng-options="x for x in categorie" ng-change="mostraci();vicini();">
+              
+	  	</select>
+            
+        </p>
+        
+        <span class="input-group-btn">
+            
+       </span>
+     </div>
+     <h3>Il più vicino?: <label style="font-size: 20px;color:#2c3e50;">Punto più vicino rispetto all'ultima posizione cercata (indirizzo o geolocalizzazione)</label></h3>
+     
+        
+      <label class="switch">
+          <input type="checkbox" ng-model="vicino" ng-change="mostraci();vicini();" >   
+      <span  class="slider round"></span>
+      </label>
+              
+              
+                
+     </div><!-- col-xs-10 -->
+     </div>
+  <br>
+  
+ </form>   
+       <div style="color:black; margin-top: -60px;">
+       
+       <my-maps id="map-canvas"></my-maps>
+       <div id="legend"><h5>Leggenda</h5></div>
+       </div>
+       
+        
+       
+   
+</div>
+</section> 
+    
+</div>
+<div ng-include="'webui/templateComune/footer.html'"></div>
+<!-- Fine codice Home -->
+
