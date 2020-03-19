@@ -1,4 +1,5 @@
 # geoFinder
+Project for the Software Engineering course - Tor Vergata Università di Roma
 
 Web App with Spring Boot and Angular for georeferenced objects
 
