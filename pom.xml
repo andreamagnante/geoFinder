@@ -28,7 +28,7 @@
         <hibernateJavaAssist.version>3.12.1.GA</hibernateJavaAssist.version>
         <hibernateValidator.version>5.1.3.Final</hibernateValidator.version>
 
-        <h2.version>1.4.187</h2.version>
+        <h2.version>2.1.210</h2.version>
         <mysql.version>5.1.34</mysql.version>
         <c3p0.version>0.9.1.2</c3p0.version>
 
