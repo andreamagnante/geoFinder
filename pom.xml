@@ -46,7 +46,7 @@
         <apacheCommonLang.version>2.6</apacheCommonLang.version>
         <apacheCodec.version>1.9</apacheCodec.version>
         <apacheXerces.version>2.10.0</apacheXerces.version>
-        <apacheXercesImpl.version>2.11.0</apacheXercesImpl.version>
+        <apacheXercesImpl.version>2.12.2</apacheXercesImpl.version>
         <jackson.version>1.9.13</jackson.version>
         <googleGson.version>2.3.1</googleGson.version>
         <fasterxmlJackson.version>2.4.3</fasterxmlJackson.version>
