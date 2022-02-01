@@ -42,7 +42,7 @@
         <javaMail.version>1.4</javaMail.version>
         <cglib.version>3.1</cglib.version>
         <jodaTime.version>2.5</jodaTime.version>
-        <xstream.version>1.4.7</xstream.version>
+        <xstream.version>1.4.19</xstream.version>
         <apacheCommonLang.version>2.6</apacheCommonLang.version>
         <apacheCodec.version>1.9</apacheCodec.version>
         <apacheXerces.version>2.10.0</apacheXerces.version>
