@@ -29,7 +29,7 @@
         <hibernateValidator.version>5.1.3.Final</hibernateValidator.version>
 
         <h2.version>1.4.187</h2.version>
-        <mysql.version>5.1.34</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <c3p0.version>0.9.1.2</c3p0.version>
 
         <slf4j.version>1.7.10</slf4j.version>
